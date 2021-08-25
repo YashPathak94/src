@@ -1,0 +1,12 @@
+
+        <div>
+            <img src="./../../assets/images/logo.png" alt="logo"  height="70px" width="70px" padding-left:66px/>
+         <h1 class="titletag"> FE Firmware Service </h1> </div>
+        <hr size="8" width="1500" color="red">
+        <div align="center" id='maindiv'>
+            <h1> User Login </h1> <br/>
+            <font size="+1">Username: </font> <input type="text" id="username"  [(ngModel)]="username" class="inam-input-text"/> <br/><br/>
+            <font size="+1">Password: </font><input type="password" id="password"  [(ngModel)]="password" class="inam-input-text"/> <br/> <br/>
+            <button name="submit" (click)="login()" class="vzbutton">Submit</button>
+            <p id="result"></p>
+        </div>
