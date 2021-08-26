@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 export class ServiceService {
 
   constructor(private http: HttpClient) { }
-  getFirwareDetails(): Observable<any>{
-    return this.http.get<any>('http://localhost:8080/');
+  getFirwareDetails(ip:String): Observable<any>{
+    return this.http.get<any>('http://10.75.12.75/ping/'+ip);
 
   }
 }

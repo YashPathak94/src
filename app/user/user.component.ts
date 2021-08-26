@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from 'app/service.service';
+import { ServiceService } from '../service.service';
+
 
 @Component({
   selector: 'app-user',
@@ -9,11 +10,11 @@ import { ServiceService } from 'app/service.service';
 export class UserComponent implements OnInit {
 
   constructor(private appService:ServiceService) { }
-
+  ipaddr:String=""
   ngOnInit(): void {
   }
   loadDoc(){
-    this.appService.getFirwareDetails().subscribe(data => {
+    this.appService.getFirwareDetails(this.ipaddr).subscribe((data: any) => {
       console.log(data);
     });
   }
